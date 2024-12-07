@@ -1,0 +1,12 @@
+.text{
+    top: 2%;
+    align-items: center;
+   font-family: Intro Bold;
+   font-size: 150px;
+   font-weight: 700;
+   line-height: 150px;
+   text-align: left;
+   margin-left: 15%;
+   color: rgba(244, 247, 249, 0.408);
+  
+  }

@@ -1,0 +1,134 @@
+.quiz-section {
+    background: #fdf2ec;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .quiz-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .quiz-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .quiz-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .quiz-options,
+  .quiz-sizes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .quiz-option {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    padding: 10px;
+  }
+  
+  .quiz-option:hover {
+    border-color: #ff9f43;
+  }
+  
+  .quiz-option.selected {
+    border-color: #ff6f00;
+  }
+  
+  .quiz-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .quiz-size label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .quiz-size input {
+    display: none;
+  }
+  
+  .quiz-size input:checked + label {
+    border-color: #ff6f00;
+  }
+  
+  .quiz-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .quiz-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .quiz-submit-button {
+    background: #ff6f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quiz-submit-button:hover {
+    background: #ff9f43;
+  }
+  
+  .quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .quiz-progress {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .quiz-next-button {
+    background: #ff6f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .quiz-next-button:hover {
+    background: #ff9f43;
+  }
+  
+  .quiz-next-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,17 @@
+.catalog{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-left: 15%;
+    gap: 15px;
+}
+.catProd{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 60%;
+}
+.prods{
+    display: flex;
+    flex-direction: column;
+}

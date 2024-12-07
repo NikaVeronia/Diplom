@@ -1,0 +1,15 @@
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(214, 216, 217);
+    margin-top: 3%;
+    padding: 10px;
+}
+.ContactAddress{
+   margin-left: 10%; 
+}
+.ContMap{
+ width: 30%;   
+}

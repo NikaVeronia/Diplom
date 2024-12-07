@@ -1,0 +1,56 @@
+.card {
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.price {
+  color: #e53935;
+  font-weight: bold;
+  margin: 8px 0;
+}
+.card {
+  position: relative;
+}
+
+
+.options {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .options {
+  opacity: 1;
+  pointer-events: auto;
+}
+.add{
+  margin-top: 35px;
+  background-color: #dddddd21;
+  border: 1px solid rgba(255, 250, 240, 0);
+}

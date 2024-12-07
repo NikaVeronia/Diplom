@@ -1,0 +1,18 @@
+
+.header {
+    padding: 20px 40px;
+    background-color: #3e2e87;
+    color: #fff;
+    width: 100%;
+  }
+  .topheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+   .cart {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  

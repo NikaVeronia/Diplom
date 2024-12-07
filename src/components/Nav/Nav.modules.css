@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+ 
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .nav a {
+    color: #f9f7f7;
+    text-decoration: none;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo {
+    
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
