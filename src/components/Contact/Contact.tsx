@@ -3,21 +3,33 @@ import ContactMap from '../ContactMap/ContactMap';
 const Contact:React.FC=()=>{
     return(
         <div className='contact' id='contact'>
+          <div className='ContCont'>
             <div className='ContactAddress'>
               <address>
-                <h2>Контакты</h2>
-                <h4>Главный офис</h4> 
-                   <a href="tel:+7 800 789 89 89">+7 800 789 89 89</a><br />
-                   <a href="">г. Санкт-Петербург, Комсомольская, 43 к1</a>
-                   <h4>отдел продаж</h4>
-                   <a href="tel:+7 800 789 89 89">+7 800 789 89 89</a><br />
-                   <a href="">г. Санкт-Петербург, Комсомольская, 43 к1</a>
+                <h2 className='conth2'>Контакты</h2>
+                <h4 className='conth4'>Главный офис <div className="icon-container">
+                    <div className="icon">?</div>
+                    <div className="speech-bubble">
+                     Адрес и телефон для корреспонденции, инвесторов.<br/>
+                     Вопросы о доставке, качестве обслуживания и товара<br/>
+                     просьба задавать в отдел продаж.
+                    </div>
+                    </div></h4> 
+                   <a href="tel:+7 800 789 89 89" className='cont_tel'>+7 800 789 89 89</a><br />
+                   <a href="" className='cont_a'>г. Санкт-Петербург, Комсомольская, 43 к1</a>
+                   <h4 className='conth4'>отдел продаж</h4>
+                   <a href="tel:+7 800 789 89 89" className='cont_tel'>+7 800 789 89 89</a><br />
+                   <a href="" className='cont_a'>г. Санкт-Петербург, Комсомольская, 43 к1</a>
+                   <div className='social'>
+                   <a href="" className='vk'></a>
+                   <a href="" className='innst'></a>
+                </div>
               </address>
-            </div>
-            <div className='ContMap'>
+              <div className='ContMap'>
                 <ContactMap/>
-             
+              </div>
             </div>
+        </div>
         </div>
         
     )

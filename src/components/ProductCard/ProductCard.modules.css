@@ -1,5 +1,5 @@
 .card {
-  width: 200px;
+  width: 300px;
   cursor: pointer;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -25,21 +25,21 @@
 }
 
 .price {
-  color: #e53935;
+  color: #383838;
   font-weight: bold;
   margin: 8px 0;
 }
+
 .card {
   position: relative;
 }
 
-
 .options {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 7px;
+  margin-left: 30%;
   display: flex;
-  gap: 10px;
+  gap: 25px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -49,8 +49,68 @@
   opacity: 1;
   pointer-events: auto;
 }
-.add{
-  margin-top: 35px;
-  background-color: #dddddd21;
+
+.add {
+  margin-top: 95px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #3d3d3d93;
   border: 1px solid rgba(255, 250, 240, 0);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;
+  }
+
+  .image {
+    height: 120px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .options {
+    margin-left: 20%;
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  .card {
+    width: 200px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .options {
+    gap: 15px;
+    margin-left: 10%;
+  }
+
+  .add {
+    margin-top: 80px;
+    padding: 8px;
+  }
 }

@@ -7,6 +7,8 @@ type CartItem = {
   price: number|string;
   imgUrl: string;
   quantity: number; // Количество добавленных товаров
+  size?: number; 
+  
 };
 
 type CartContextProps = {

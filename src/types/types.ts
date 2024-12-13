@@ -1,7 +1,7 @@
 
 export interface Product  {
     id: number;
-    vendorСode: string;
+    vendorСode?: string;
     inStock: number|string;
     title:string;
     description:string;

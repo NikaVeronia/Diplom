@@ -9,13 +9,11 @@ interface TeamCardProps {
 const TeamCard: React.FC<TeamCardProps> = ({ imgUrl,name , role }) => {
 
   return (
-    <div className="team-content">
       <div className="team-card">
         <img src={imgUrl} alt="" className="teamImg"/>
-        <h2>{name}</h2>
-        <p>{role}</p>
+        <h2 className="team-card-h2">{name}</h2>
+        <p className="team-card-p">{role}</p>
       </div>
-    </div>
   );
 };
 

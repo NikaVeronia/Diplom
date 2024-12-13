@@ -16,7 +16,7 @@ const Catalog: React.FC = () => {
       gender: [] as string[],
       sizes: [] as number[],
   });
-  const [visibleCount, setVisibleCount] = useState<number>(6);
+  const [visibleCount, setVisibleCount] = useState<number>(9);
   const [, setAvailableSizes] = useState<number[]>([]);
 
   const getQueryString = (filter: typeof filters) => {
@@ -85,16 +85,20 @@ const fetchProducts = async (url:string) => {
   ).slice(0, visibleCount);
 
   return (
+  <div>
+     <h1 className="cattext">Каталог</h1>
       <div className="catalog" id='catalog'>
-        <h1>Каталог</h1>
-        <Filter
-  filters={filters}
-  setFilters={(updatedFilters) =>
-    setFilters((prevFilters) => ({ ...prevFilters, ...updatedFilters }))
-  }
-  applyFilters={applyFilters} // Передаём функцию
-  resetFilters={resetFilters}
-/>          <div className="prods">
+           <div className='catFit'>
+              <Filter
+               filters={filters}
+               setFilters={(updatedFilters) =>
+               setFilters((prevFilters) => ({ ...prevFilters, ...updatedFilters }))
+               }
+               applyFilters={applyFilters} // Передаём функцию
+               resetFilters={resetFilters}
+               />  
+           </div>      
+           <div className="prods">
               {isLoading && <div className="spinner">Загрузка...</div>}
               {!isLoading && error && <div className="error">{error}</div>}
               {!isLoading && !error && products.length > 0 && (
@@ -107,8 +111,8 @@ const fetchProducts = async (url:string) => {
                       {visibleCount < products.length && (
                           <div>
                               <button
-                                  className="button"
-                                  onClick={() => setVisibleCount((prev) => prev + 6)}
+                                  className="buttonNext"
+                                  onClick={() => setVisibleCount((prev) => prev + 9)}
                                   disabled={isLoading}>
                                   Показать ещё
                               </button>
@@ -118,6 +122,9 @@ const fetchProducts = async (url:string) => {
               )}
           </div>
       </div>
+      </div>
   );
+
+  
 };
 export default Catalog

@@ -33,7 +33,7 @@ const Comand: React.FC = () => {
   }, []);
 
   return (
-    <div className='ContComand'>
+    <div className='ContComand' id='comand'>
       <div className='imgComand'>
         {isLoading && <div className="spinner">Загрузка...</div>}
         {error && <div className="error">{error}</div>}

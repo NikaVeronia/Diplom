@@ -77,15 +77,26 @@ const QuizSection: React.FC = () => {
 
   return (
     <div className="quiz-section" id="quiz">
+      {currentQuiz.type === "image" &&(
       <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
+    )}
+    {currentQuiz.type === "size" &&(
+      <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
+    )}
+    {currentQuiz.type === "textarea" &&(
+      <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
+    )}
+     {currentQuiz.type === "form" &&(
+      <h2 className="quiz-title">Ваша подборка готова!</h2>
+    )}
       {currentQuiz.type !== "form" && (
         <p className="quiz-subtitle">
           Ответьте на три вопроса, и мы вышлем каталог с самыми подходящими для вас моделями
         </p>
       )}
-
+<hr />
       <div className="quiz-content">
-        {currentQuiz.type === "image" && (
+        {currentQuiz.type === "image" &&(
           <>
             <p className="quiz-question">{currentQuiz.question}</p>
             <div className="quiz-options">
@@ -111,8 +122,8 @@ const QuizSection: React.FC = () => {
             <div className="quiz-sizes">
               {Array.from(new Set(sneakers.flatMap((sneaker) => sneaker.sizes))).map((size, index) => (
                 <label key={index} className="quiz-size">
-                  <input
-                    type="radio"
+                  <input className="quiz-size"
+                    type="checkbox"
                     name="size"
                     value={size}
                     checked={answers[currentStep] === size.toString()}
@@ -121,7 +132,9 @@ const QuizSection: React.FC = () => {
                   {size}
                 </label>
               ))}
+              
             </div>
+            <div className="imgRect"><img className="imgRect" src="../../../src/image/Rectangle 45.png" alt="" /></div>
           </>
         )}
 
@@ -134,13 +147,16 @@ const QuizSection: React.FC = () => {
               value={answers[currentStep] || ""}
               onChange={handleInputChange}
             />
+            <hr />
           </>
         )}
 
         {currentQuiz.type === "form" && (
           <>
-            <p className="quiz-question">{currentQuiz.question}</p>
+          <p>Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p>
             <div className="quiz-form">
+            <h2 className="quiz-h2">Получить предложение</h2>
+            <p className="quiz-p">Получите подборку подходящих для вас моделей на почту</p>
               <input
                 type="text"
                 name="name"

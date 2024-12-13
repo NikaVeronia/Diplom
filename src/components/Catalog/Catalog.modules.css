@@ -1,17 +1,104 @@
-.catalog{
+.catalog {
     display: flex;
     flex-direction: row;
     margin-top: 3%;
     margin-left: 15%;
     gap: 15px;
 }
-.catProd{
+
+.catProd {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    width: 60%;
+    width: 30%;
 }
-.prods{
+
+.prods {
     display: flex;
     flex-direction: column;
+}
+
+.catFit {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+}
+
+.buttonNext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 50%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e53935;
+    color: rgb(250, 251, 251);
+}
+
+.buttonNext:hover {
+    background-color: #2c2062;
+}
+
+.cattext {
+    margin-left: 16%;
+    color: rgba(68, 75, 88, 1);
+}
+
+/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .catalog {
+        flex-direction: column;
+        margin-left: 10%;
+    }
+
+    .catProd {
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+    }
+
+    .catFit {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonNext {
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .cattext {
+        margin-left: 10%;
+    }
+}
+
+/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    .catalog {
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .catProd {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .catFit {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonNext {
+        margin-top: 5%;
+        align-self: center;
+    }
+
+    .cattext {
+        margin-left: 5%;
+        text-align: center;
+    }
 }

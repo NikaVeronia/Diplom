@@ -1,46 +1,96 @@
 .hero {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    background-color: #3e2e87;
-    color: #fff;
-    width: 40%;
- 
-  }
-  .hero::before {
-    content: "SneakMax";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Intro", sans-serif;
-    color: rgba(255, 255, 255, 0.12);
-    font-size: max(20rem, 70px);
-    font-weight: 700;
-    line-height: 200px;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #3e2e87;
+  color: #fff;
+  width: 40%;
+}
 
-  .title {
-    font-size: 32px;
-    margin-bottom: 5px;
-  }
-  
-  .subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  
-  .button {
-    background-color: #ff5e57;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    width: 170px;
-  }
-  
-  .button:hover {
-    background-color: #e04d47;
-  }
-  
+.hero::before {
+  content: "SneakMax";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Intro", sans-serif;
+  color: rgba(255, 255, 255, 0.12);
+  font-size: max(20rem, 70px);
+  font-weight: 600;
+  line-height: 200px;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #ff5e57;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  width: 170px;
+  z-index: 100;
+}
+
+.button:hover {
+  background-color: #e04d47;
+}
+
+/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+@media (max-width: 1024px) {
+.hero {
+  padding: 30px;
+  width: 60%;
+}
+
+.hero::before {
+  font-size: max(15rem, 50px);
+}
+
+.title {
+  font-size: 28px;
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+.button {
+  width: 150px;
+  padding: 12px;
+}
+}
+
+/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
+@media (max-width: 768px) {
+.hero {
+  padding: 20px;
+  width: 100%;
+}
+
+.hero::before {
+  font-size: max(10rem, 40px);
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 14px;
+}
+
+.button {
+  width: 130px;
+  padding: 10px;
+}
+}
