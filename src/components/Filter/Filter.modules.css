@@ -11,7 +11,16 @@
   height: 70%;
   overflow: hidden;
 }
+.title{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
+}
+.FittextH{
+  font-size: 21px;
+  color: rgba(68, 75, 88, 1);
+}
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -130,43 +139,61 @@
 }
 
 .Fittext {
+  font-size: 16px;
   color: rgba(68, 75, 88, 1);
 }
 
 /* Медиа-запрос для экранов шириной до 1024px (планшеты) */
 @media (max-width: 1024px) {
   .filter {
-    width: 70%;
+    width: 100%;
     height: auto;
     padding: 30px;
+   
   }
-
+  .minmax {
+    width: 100%;
+  }
   .sect {
     grid-template-columns: 1fr 1fr;
   }
 
   .sizes {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-
+  .priceRange{
+    width: 100%;
+  }
+  .minPrice{
+    width: 50%;
+  }
+  .maxPrice{
+    width: 50%;
+  }
   .buttons {
     margin: 30px;
+  }
+  .nouislider {
+    width: 100%;
   }
 }
 
 /* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
   .filter {
-    width: 90%;
+    width: 100%;
     padding: 20px;
+    margin: 0;
   }
-
+  .minmax {
+    width: 100%;
+  }
   .sect {
     grid-template-columns: 1fr;
   }
 
   .sizes {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .buttons {
@@ -178,7 +205,19 @@
     margin: 10% 0;
   }
 }
-
+@media (max-width: 480px) {
+  .filter {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+}
+.minmax {
+  width: 100%;
+}
+.nouislider {
+  width: 100%;
+}
 /* .priceRange{
   width: 100%;
 } */

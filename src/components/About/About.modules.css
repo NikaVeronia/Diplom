@@ -5,8 +5,14 @@
     background: rgba(72, 66, 131, 1);
     width: auto;
     height: 40vh;
+    
 }
-
+.figure{
+    width: auto;
+    object-fit: cover;
+    height: auto; 
+  
+}
 .cont {
     margin-top: 3%;
     width: 25%;
@@ -52,7 +58,9 @@ article {
         height: auto;
         padding: 10px;
     }
-
+    .figure{
+        display: none;
+     } 
     .cont {
         width: 100%;
         text-align: center;
@@ -68,4 +76,11 @@ article {
         width: 100%;
         font-size: 14px;
     }
+   
 }
+ /* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
+ @media (max-width: 380px) {
+    .figure{
+       display: none;
+    } 
+ }

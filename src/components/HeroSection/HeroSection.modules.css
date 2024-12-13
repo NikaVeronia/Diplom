@@ -5,6 +5,7 @@
   background-color: #3e2e87;
   color: #fff;
   width: 40%;
+  margin-bottom: 13%;
 }
 
 .hero::before {
@@ -54,6 +55,7 @@
 
 .hero::before {
   font-size: max(15rem, 50px);
+  content: none ;
 }
 
 .title {
@@ -74,11 +76,13 @@
 @media (max-width: 768px) {
 .hero {
   padding: 20px;
-  width: 100%;
+  width: auto;
+  margin: 3%;
 }
 
 .hero::before {
   font-size: max(10rem, 40px);
+  content: none ;
 }
 
 .title {

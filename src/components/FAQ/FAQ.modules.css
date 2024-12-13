@@ -43,4 +43,15 @@
     color: #555;
     line-height: 1.4;
   }
-  
+  @media (max-width: 768px) { 
+    .faq {
+      margin-left: 3%;
+      
+    }
+  }
+  @media (max-width: 480px) { 
+    .faq {
+      margin-left: 3%;
+      
+    }
+  }

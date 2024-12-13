@@ -43,7 +43,15 @@
 
     .teamCards {
         grid-template-columns: 1fr;
-        margin: 0 5%;
+        margin: 5% 15%;
+        gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+   
+    .teamCards {
+        grid-template-columns: 1fr;
+        margin: 5% 5%;
         gap: 10px;
     }
 }

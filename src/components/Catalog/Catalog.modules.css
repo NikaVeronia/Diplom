@@ -51,17 +51,19 @@
 /* Медиа-запрос для экранов шириной до 1024px (планшеты) */
 @media (max-width: 1024px) {
     .catalog {
-        flex-direction: column;
-        margin-left: 10%;
+      flex-direction: column;
+       margin-left: 10px;
+       width: 100%;
     }
 
     .catProd {
-        grid-template-columns: 1fr 1fr;
-        width: 80%;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin-left: 10%;
     }
 
     .catFit {
-        width: 100%;
+        width: 70%;
         height: auto;
     }
 
@@ -79,21 +81,56 @@
 @media (max-width: 768px) {
     .catalog {
         flex-direction: column;
-        margin-left: 5%;
+        gap: 10px;
+      margin-left: 10px;
     }
 
     .catProd {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr ;
         width: 100%;
+      
     }
 
     .catFit {
+        width: 80%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .buttonNext {
+        margin-top: 5%;
+        margin-left: 22%;
+        margin-bottom: 10%;
+        align-self: center;
+    }
+
+    .cattext {
+        margin-left: 5%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog {
+        flex-direction: column;
+       margin-left: 10px;
+    }
+
+    .catProd {
+        grid-template-columns: 1fr 1fr;
         width: 100%;
+      
+    }
+
+    .catFit {
+        width: 80%;
         height: auto;
     }
 
     .buttonNext {
         margin-top: 5%;
+        margin-left: 22%;
+        margin-bottom: 10%;
         align-self: center;
     }
 

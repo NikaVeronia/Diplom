@@ -114,3 +114,31 @@
     padding: 8px;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    width: 150px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .options {
+    gap: 15px;
+    margin-left: 10%;
+  }
+
+  .add {
+    margin-top: 80px;
+    padding: 8px;
+  }
+}

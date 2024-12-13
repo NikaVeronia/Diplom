@@ -139,6 +139,10 @@
 
 /* Медиа-запрос для экранов шириной до 1024px (планшеты) */
 @media (max-width: 1024px) {
+  .contact {
+    height:auto;
+    width: auto;
+   }
   .ContactAddress {
     flex-direction: column;
     margin-left: 10%;
@@ -147,7 +151,7 @@
 
   .ContMap {
     width: 80%;
-    margin: 5% auto;
+    margin: 5% 5%;
   }
 
   .social {
@@ -183,8 +187,8 @@
   }
 
   .social {
-    flex-direction: column;
-    width: 80%;
+    flex-direction: row;
+    width: 50%;
     margin: 5% auto;
   }
 

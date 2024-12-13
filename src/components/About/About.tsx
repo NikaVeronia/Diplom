@@ -2,7 +2,7 @@ import "./About.modules.css";
 const About:React.FC = () => {
     return(
      <div className="aboutContainer" id="about">
-        <img src="../../../src/icon/figure.png" alt="" />
+      <div className="figure"> <img src="../../../src/icon/figure.png" alt="" /></div>
         <div className="cont">
           <h2>Пара слов о нас</h2>
           <p>Спорт держит нас в форме. Учит дисциплине. Объединяет нас.
