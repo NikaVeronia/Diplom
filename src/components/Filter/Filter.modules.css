@@ -130,7 +130,15 @@
   -ms-border-radius: 0 10px 0 0;
   -o-border-radius: 0 10px 0 0;
 }
-
+ 
+.nouislider {
+   width: 100%;
+   max-width: 250px;
+   margin: 0 auto;
+   position: relative;
+   box-sizing: border-box;
+ 
+ }
 .minmax {
   display: flex;
   flex-direction: row;
@@ -143,7 +151,7 @@
   color: rgba(68, 75, 88, 1);
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+
 @media (max-width: 1024px) {
   .filter {
     width: 100%;
@@ -178,7 +186,6 @@
   }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
   .filter {
     width: 100%;
@@ -212,44 +219,9 @@
     margin: 0;
   }
 }
-.minmax {
-  width: 100%;
-}
-.nouislider {
-  width: 100%;
-}
-/* .priceRange{
-  width: 100%;
-} */
-.slider-container,
-.nouislider {
-   width: 100%;
-   max-width: 250px;
-   margin: 0 auto;
-   position: relative;
-   box-sizing: border-box;
- 
- }
- 
- .noUi-target {
 
-   background: #c0bfbf;
-   height: 4px;
-   width: 100%;
-   position: relative;
- }
  
- .noUi-handle {
-   overflow: hidden;
-   background: #515050;
-   width: 16px;
-   height: 16px;
-   position: absolute;
-   border: 2px solid #fff;
- }
  
- .noUi-connect {
-   background: #636363;
- }
+ 
  
  

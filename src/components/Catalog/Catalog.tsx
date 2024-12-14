@@ -65,8 +65,7 @@ const fetchProducts = async (url:string) => {
     const url  ='https://87c4e51ebc337641.mokky.dev/sneackers'
     fetchProducts(url);
   }, []);
-
-
+ 
   const resetFilters = () => {
     setFilters({
         minPrice: 1850,

@@ -48,23 +48,26 @@
     color: rgba(68, 75, 88, 1);
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+
 @media (max-width: 1024px) {
     .catalog {
-      flex-direction: column;
-       margin-left: 10px;
+        justify-content: space-between;
+      flex-direction: row;
+       margin: 10px;
        width: 100%;
     }
 
     .catProd {
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 100%;
+
+        grid-template-columns: 1fr 1fr ;
+        width: 70%;
         margin-left: 10%;
     }
 
     .catFit {
-        width: 70%;
+        width: 30%;
         height: auto;
+       
     }
 
     .buttonNext {
@@ -77,7 +80,6 @@
     }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
     .catalog {
         flex-direction: column;
@@ -92,9 +94,9 @@
     }
 
     .catFit {
-        width: 80%;
+        width: 100%;
         height: auto;
-        margin: 10px;
+        margin-left: 10px;
     }
 
     .buttonNext {
@@ -113,13 +115,15 @@
 @media (max-width: 480px) {
     .catalog {
         flex-direction: column;
-       margin-left: 10px;
+    margin-left: 4px;
+       gap: 5px;
     }
 
     .catProd {
         grid-template-columns: 1fr 1fr;
         width: 100%;
-      
+      margin-left: 4px;
+      gap: 5px;
     }
 
     .catFit {

@@ -1,0 +1,35 @@
+/* Стили для дорожки слайдера */
+.noUi-target {
+  background: #f5f5f5; /* Цвет фона дорожки */
+  border: 1px solid #ccc; /* Рамка */
+  border-radius: 8px; /* Закругленные углы */
+  height: 6px; /* Высота дорожки */
+}
+
+/* Активная (заполненная) часть дорожки */
+.noUi-connect {
+  background: #b9a6a4; /* Цвет активной части */
+  border-radius: 8px;
+}
+
+/* Ползунки */
+.noUi-handle {
+  display: none;
+}
+
+/* При наведении */
+.noUi-handle:hover {
+  background: #555;
+}
+
+/* Активный ползунок при фокусе */
+.noUi-handle:focus {
+  outline: none;
+  box-shadow: 0 0 10px #007bff;
+}
+
+/* Отображение шкалы (если включена) */
+.noUi-horizontal .noUi-ticks {
+  height: 8px;
+  background: #ddd;
+}

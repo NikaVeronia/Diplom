@@ -22,7 +22,7 @@
     .ContComand {
         margin-top: 5%;
         padding-top: 8%;
-        background-position: center;
+        background-position-y: top;
     }
 
     .teamCards {

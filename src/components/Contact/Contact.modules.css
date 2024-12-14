@@ -137,7 +137,7 @@
     display: block;
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+
 @media (max-width: 1024px) {
   .contact {
     height:auto;
@@ -168,7 +168,6 @@
   }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
     .contact {
      height:auto;

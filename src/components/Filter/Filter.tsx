@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Filter.modules.css";
 import Nouislider from "nouislider-react";
 import "nouislider/dist/nouislider.css";
+import   "./NouisliderSlis.modules.css";
 
 type Filters = {
   minPrice: number;
@@ -11,6 +12,7 @@ type Filters = {
 };
 
 interface FilterProps {
+
   filters: Filters;
   setFilters: (filters: Partial<Filters>) => void;
   applyFilters: (appliedFilters?: Partial<Filters>) => void;
@@ -18,6 +20,7 @@ interface FilterProps {
 }
 
 const Filter: React.FC<FilterProps> = ({
+  
   filters,
   setFilters,
   applyFilters,
@@ -25,13 +28,16 @@ const Filter: React.FC<FilterProps> = ({
 }) => {
   // Локальное состояние для временного хранения изменений
   const [localFilters, setLocalFilters] = useState<Filters>(filters);
+  const priceRange = { min: 1850, max: 25768 };
 
   // Обработчик изменения цены
   const handlePriceChange = (values: (string | number)[]) => {
+    const minValue = Math.max(priceRange.min, Number(values[0]));
+    const maxValue = Math.min(priceRange.max, Number(values[1]));
     setLocalFilters((prev) => ({
       ...prev,
-      minPrice: Number(values[0]),
-      maxPrice: Number(values[1]),
+      minPrice: minValue,
+      maxPrice: maxValue,
     }));
   };
 
@@ -75,14 +81,14 @@ const Filter: React.FC<FilterProps> = ({
           <label className="Fittext">Цена, руб</label>
         </div>
         <div className="minmax">
-          <div className="minPrice">{localFilters.minPrice} Руб</div>
-          <div className="maxPrice">{localFilters.maxPrice} Руб</div>
+          <div className="minPrice">{localFilters?.minPrice||0} Руб</div>
+          <div className="maxPrice">{localFilters?.maxPrice||0} Руб</div>
         </div>
         <div className="nouislider">
           <Nouislider
             className="priceRange"
             range={{ min: 1850, max: 25768 }}
-            start={[localFilters.minPrice, localFilters.maxPrice]}
+            start={[localFilters?.minPrice||0, localFilters?.maxPrice||0]}
             step={100}
             connect
             onChange={handlePriceChange}
