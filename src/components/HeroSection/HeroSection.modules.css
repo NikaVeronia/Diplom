@@ -5,7 +5,8 @@
   background-color: #3e2e87;
   color: #fff;
   width: 40%;
-  margin-bottom: 13%;
+  margin-bottom: 3%;
+  margin-left: 10%;
 }
 
 .hero::before {
@@ -17,7 +18,7 @@
   transform: translate(-50%, -50%);
   font-family: "Intro", sans-serif;
   color: rgba(255, 255, 255, 0.12);
-  font-size: max(20rem, 70px);
+  font-size: max(15rem, 70px);
   font-weight: 600;
   line-height: 200px;
 }
@@ -47,7 +48,7 @@
   background-color: #e04d47;
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+
 @media (max-width: 1024px) {
 .hero {
   padding: 30px;
@@ -73,7 +74,6 @@
 }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
 .hero {
   padding: 20px;

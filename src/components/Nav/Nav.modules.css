@@ -1,34 +1,36 @@
 .container {
- display: grid;
- grid-template-columns: 1fr 5fr 1fr;
- grid-template-rows: 1fr;
- width: 70%;
- margin-left: 15%;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  width: 75%;
+  margin-left: 15%;
  
 }
 
 .nav {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
-    gap: 10px;
-    text-align: right;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  text-align: right;
+  font-size: larger;
 }
 
 .nav a {
-    color: #f9f7f7;
-    text-decoration: none;
+  color: #f9f7f7;
+  text-decoration: none;
 }
 
 .nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .logo {
   text-align: left;
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
+
 .cart {
   text-align: right;
   color: white;
@@ -36,17 +38,16 @@
   text-decoration: none;
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+
 @media (max-width: 1024px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
+    grid-template-columns: 1fr 4fr 1fr;
+    width: 100%;
+    margin-left: 5%;
   }
 
   .nav {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); 
   }
 
   .logo {
@@ -54,28 +55,45 @@
   }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 4fr 1fr;
     width: 100%;
-    padding: 10px;
+    margin-left: 5%;
   }
 
   .nav {
-    flex-direction: column;
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .nav a {
+    font-size: 14px;
   }
 
   .logo {
     font-size: 18px;
-    text-align: center;
+    text-align: center; 
   }
+
   .cart {
-    font-size: 14px;
-  }
-  .nav a {
-    font-size: 14px;
+    text-align: center; 
+    margin-top: 10px;
   }
 }

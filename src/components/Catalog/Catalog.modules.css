@@ -1,147 +1,129 @@
 .catalog {
-   display: grid;
-   grid-template-rows: 1fr auto;
-   grid-template-columns: 1fr 3fr;
-  
-    margin-top: 3%;
-    gap: 15px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr auto;
+  margin-top: 3%;
+  margin-left: 6%;
+  gap: 15px;
 }
 
 .catProd {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 80%;
 }
 
 .prods {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .catFit {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 
 .buttonNext {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 7%;
-    margin-left: 50%;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #e53935;
-    color: rgb(250, 251, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7%;
+  margin-left: 50%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e53935;
+  color: #fafbfb;
 }
 
 .buttonNext:hover {
-    background-color: #2c2062;
+  background-color: #2c2062;
 }
 
 .cattext {
-    
-   
-    color: rgba(68, 75, 88, 1);
+  margin-left: 15%;
+  color: rgba(68, 75, 88, 1);
 }
 
+/* Медиазапросы */
 
+/* Ширина до 1024px */
 @media (max-width: 1024px) {
-    .catalog {
-        justify-content: space-between;
-      flex-direction: row;
-       margin: 10px;
-       width: 70%;
-    }
+  .catalog {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-left: 5%;
+  }
 
-    .catProd {
+  .catProd {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%; /* Заполняет родительский элемент */
+  }
 
-        grid-template-columns: 1fr 1fr ;
-        width: 70%;
-        margin-left: 10%;
-    }
+  .catFit {
+    width: 70%;
+    height: auto; /* Адаптируется к содержимому */
+  }
 
-    .catFit {
-        width: 30%;
-        height: auto;
-       
-    }
-
-    .buttonNext {
-        margin-left: 0;
-        align-self: center;
-    }
-
-    .cattext {
-        margin-left: 10%;
-    }
+  .buttonNext {
+    margin-left: 0;
+    width: fit-content;
+  }
 }
 
+/* Ширина до 768px */
 @media (max-width: 768px) {
-    .catalog {
-        flex-direction: column;
-        gap: 10px;
-      margin-left: 10px;
-    }
+  .catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 10px;
+  }
 
-    .catProd {
-        grid-template-columns: 1fr 1fr ;
-        width: 100%;
-      
-    }
+  .catProd {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
 
-    .catFit {
-        width: 100%;
-        height: auto;
-        margin-left: 10px;
-    }
-
-    .buttonNext {
-        margin-top: 5%;
-        margin-left: 22%;
-        margin-bottom: 10%;
-        align-self: center;
-    }
-
-    .cattext {
-        margin-left: 5%;
-        text-align: center;
-    }
+  .buttonNext {
+    margin-left: 0;
+    width: fit-content;
+  }
 }
 
+/* Ширина до 480px */
 @media (max-width: 480px) {
-    .catalog {
-        flex-direction: column;
-    margin-left: 4px;
-       gap: 5px;
-    }
+  .catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 5%;
+  }
 
-    .catProd {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-      margin-left: 4px;
-      gap: 5px;
-    }
+  .catProd {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    width: 100%;
+  }
 
-    .catFit {
-        width: 80%;
-        height: auto;
-    }
+  .catFit {
+    height: auto;
+  }
 
-    .buttonNext {
-        margin-top: 5%;
-        margin-left: 22%;
-        margin-bottom: 10%;
-        align-self: center;
-    }
+  .buttonNext {
+    margin-top: 5%;
+    padding: 8px 12px;
+  }
 
-    .cattext {
-        margin-left: 5%;
-        text-align: center;
-    }
+  .cattext {
+    text-align: center;
+    font-size: 14px;
+  }
 }

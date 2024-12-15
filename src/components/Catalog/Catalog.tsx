@@ -90,7 +90,6 @@ const fetchProducts = async (url:string) => {
   <div className={className}>
      <div className="cattext"><h1 >Каталог</h1></div>
         <div className="catalog" id='catalog'>
-     
            <div className='catFit'>
               <Filter
                filters={filters}

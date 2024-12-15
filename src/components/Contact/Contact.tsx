@@ -8,7 +8,7 @@ type ContactProps = {
 const Contact:React.FC<ContactProps>=()=>{
     return(
         <div className='contact' id='contact'>
-          <div className='ContCont'>
+         
             <div className='ContactAddress'>
               <address>
                 <h2 className='conth2'>Контакты</h2>
@@ -35,7 +35,7 @@ const Contact:React.FC<ContactProps>=()=>{
               </div>
             </div>
         </div>
-        </div>
+     
         
     )
 };

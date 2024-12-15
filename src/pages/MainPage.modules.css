@@ -4,11 +4,7 @@
     gap: 20px;
   }
   
-  .grid-catalog{
-    display: grid;
-    grid-template-rows: 1fr auto;
-    width: 70%;
-  }
+  
   .grid-comand{
     display: grid;
   }
