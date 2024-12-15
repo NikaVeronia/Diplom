@@ -53,13 +53,14 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
 
   // Загрузка данных из sneakers.json
   useEffect(() => {
-    fetch("https://87c4e51ebc337641.mokky.dev/sneackers") 
+    fetch("https://87c4e51ebc337641.mokky.dev/sneackers")
       .then((response) => response.json())
       .then((data) => setSneakers(data))
       .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
 
   const handleNextStep = () => {
+    console.log(`Шаг ${currentStep + 1}:`, answers[currentStep] || "Ответ не заполнен");
     if (currentStep < quizData.length - 1) {
       setCurrentStep(currentStep + 1);
     }
@@ -77,30 +78,27 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = () => {
+    console.log("Ответы на вопросы:", answers);
+    console.log("Данные формы:", formData);
+    alert("Ваши данные отправлены!");
+  };
+
   const currentQuiz = quizData[currentStep];
 
   return (
     <div className="quiz-section" id="quiz">
-      {currentQuiz.type === "image" &&(
-      <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
-    )}
-    {currentQuiz.type === "size" &&(
-      <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
-    )}
-    {currentQuiz.type === "textarea" &&(
-      <h2 className="quiz-title">Мы подберем идеальную пару для вас</h2>
-    )}
-     {currentQuiz.type === "form" &&(
-      <h2 className="quiz-title">Ваша подборка готова!</h2>
-    )}
+      <h2 className="quiz-title">
+        {currentQuiz.type === "form" ? "Ваша подборка готова!" : "Мы подберем идеальную пару для вас"}
+      </h2>
       {currentQuiz.type !== "form" && (
         <p className="quiz-subtitle">
           Ответьте на три вопроса, и мы вышлем каталог с самыми подходящими для вас моделями
         </p>
       )}
-<hr />
+      <hr />
       <div className="quiz-content">
-        {currentQuiz.type === "image" &&(
+        {currentQuiz.type === "image" && (
           <>
             <p className="quiz-question">{currentQuiz.question}</p>
             <div className="quiz-options">
@@ -124,21 +122,21 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
           <>
             <p className="quiz-question">{currentQuiz.question}</p>
             <div className="quiz-sizes">
-              {Array.from(new Set(sneakers.flatMap((sneaker) => sneaker.sizes))).map((size, index) => (
-                <label key={index} className="quiz-size">
-                  <input className="quiz-size"
-                    type="checkbox"
-                    name="size"
-                    value={size}
-                    checked={answers[currentStep] === size.toString()}
-                    onChange={() => handleSelect(currentStep, size.toString())}
-                  />
-                  {size}
-                </label>
-              ))}
-              
+              {Array.from(new Set(sneakers.flatMap((sneaker) => sneaker.sizes))).map(
+                (size, index) => (
+                  <label key={index} className="quiz-size">
+                    <input
+                      type="checkbox"
+                      name="size"
+                      value={size}
+                      checked={answers[currentStep] === size.toString()}
+                      onChange={() => handleSelect(currentStep, size.toString())}
+                    />
+                    {size}
+                  </label>
+                )
+              )}
             </div>
-            <div className="imgRect"><img className="imgRect" src="../../../src/image/Rectangle 45.png" alt="" /></div>
           </>
         )}
 
@@ -151,16 +149,13 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
               value={answers[currentStep] || ""}
               onChange={handleInputChange}
             />
-            <hr />
           </>
         )}
 
         {currentQuiz.type === "form" && (
           <>
-          <p>Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p>
+            <p>Оставьте свои контактные данные, чтобы бы мы могли отправить подготовленный для вас каталог</p>
             <div className="quiz-form">
-            <h2 className="quiz-h2">Получить предложение</h2>
-            <p className="quiz-p">Получите подборку подходящих для вас моделей на почту</p>
               <input
                 type="text"
                 name="name"
@@ -177,7 +172,9 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
                 onChange={handleFormChange}
                 className="quiz-input"
               />
-              <button className="quiz-submit-button">Получить</button>
+              <button onClick={handleSubmit} className="quiz-submit-button">
+                Получить
+              </button>
             </div>
           </>
         )}
@@ -188,11 +185,7 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
           <p className="quiz-progress">
             {currentStep + 1} из {quizData.length}
           </p>
-          <button
-            className="quiz-next-button"
-            onClick={handleNextStep}
-            disabled={!answers[currentStep]}
-          >
+          <button className="quiz-next-button" onClick={handleNextStep}>
             Следующий шаг
           </button>
         </div>

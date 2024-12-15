@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 type ProductDetailModalProps = {
   product: {
     id: number;
-    vendorCode?: string; 
+    vendorCode?: string;
     inStock: number | string;
     title: string;
     description: string;
     stars: number;
     imgUrl: string;
-    sizes: number[]; 
+    sizes: number[];
     price: number | string;
     oldPrice?: number | string;
     gender: string;
@@ -21,9 +21,10 @@ type ProductDetailModalProps = {
     country: string;
   };
   onClose: () => void;
+  isDetailPage?: boolean; // Указывает, находится ли пользователь на детальной странице
 };
 
-const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClose }) => {
+const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClose, isDetailPage = false }) => {
   const { addToCart } = useCart();
   const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
@@ -38,24 +39,40 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
       title: product.title,
       price: product.price,
       imgUrl: product.imgUrl,
-      size: selectedSize, // Учет размера при добавлении в корзину
+      size: selectedSize,
     });
-    onClose(); // Закрытие модального окна
+
+    // Закрытие модального окна только если это не детальная страница
+    if (!isDetailPage) {
+      onClose();
+    } else {
+      alert("Товар добавлен в корзину!");
+      navigate('/basket')
+    }
+    navigate('/basket')
+
   };
 
-  const handleNavigateBack = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Предотвращение закрытия окна при переходе назад
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).classList.contains("modal-overlay")) {
+      handleCloseClick();
+    }
+  };
+
+  const handleCloseClick = () => {
     navigate(-1); // Возврат на предыдущую страницу
+
+      onClose(); // Закрытие модального окна
   };
 
   const handleSizeClick = (size: number) => {
-    setSelectedSize(size); // Устанавливаем выбранный размер
+    setSelectedSize(size);
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={handleNavigateBack}>
+    <div className="modal-overlay" onClick={handleOverlayClick}>
+      <div className="modal-content">
+        <button className="modal-close" onClick={handleCloseClick}>
           ✖
         </button>
         <img src={product.imgUrl} alt={product.title} className="modal-image" />
@@ -71,7 +88,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
         <div className="rating">★★★★★</div>
         <label>Выберите размер:</label>
         <div className="sizeS">
-          {[35, 36, 37, 38, 39, 40, 41, 42, 43].map((size) => (
+          {product.sizes.map((size) => (
             <button
               key={size}
               className={`sizeSButton ${selectedSize === size ? "active" : ""}`}

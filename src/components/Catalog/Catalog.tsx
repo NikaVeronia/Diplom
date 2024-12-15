@@ -104,6 +104,8 @@ const fetchProducts = async (url:string) => {
            <div className="prods">
               {isLoading && <div className="spinner">Загрузка...</div>}
               {!isLoading && error && <div className="error">{error}</div>}
+              {!isLoading && products.length == 0 && <div className="error"> товары не найдены</div>}
+
               {!isLoading && !error && products.length > 0 && (
                   <>
                       <div className="catProd">

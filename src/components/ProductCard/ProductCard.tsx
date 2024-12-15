@@ -27,7 +27,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { addToCart } = useCart();
 
-  const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   
@@ -48,7 +47,7 @@ const handleAddToCart = (e: React.MouseEvent) => {
 
   return (
     <>
-      <div className="card" onClick={openModal}>
+      <div className="card">
         <div className="options">
           <Link to={`/product/${product.id}`} state={{ product }} className="show">
             <button className="add">
