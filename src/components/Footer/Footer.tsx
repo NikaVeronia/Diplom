@@ -1,12 +1,15 @@
 import Nav from '../Nav/Nav';
 import  './Footer.modules.css';
 
-const Footer: React.FC = () => {
+type FooterProps = {
+  className?: string;
+};
+
+const Footer: React.FC<FooterProps>  = () => {
   return (
     <footer className={`footer`}>
       <div className={`block`} >
         <Nav />
-        <div className={`cart`}>Корзина 🛒</div>
       </div>
     </footer>
   );

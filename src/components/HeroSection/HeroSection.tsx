@@ -1,7 +1,11 @@
 import React from 'react';
 import './HeroSection.modules.css';
 
-const HeroSection: React.FC = () => {
+type HeroSectionProps = {
+  className?: string;
+};
+
+const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <section className={`hero`}>
       <h1 className={`title`}>

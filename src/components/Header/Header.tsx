@@ -5,14 +5,20 @@ import HeroSection from '../HeroSection/HeroSection';
 import Nav from '../Nav/Nav';
 import  './Header.modules.css';
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+const Header: React.FC<HeaderProps> = () => {
   return (
     <header className={`header`}>
       <div className={`topheader`}>
-        <Nav />
-        <a href={`basket`}  className={`cart`}>Корзина 🛒</a>
+        < Nav />
+        <hr />
+        </div>
+        <div >
+      <HeroSection className='heroSection' />
       </div>
-      <HeroSection />
     </header>
   );
 };

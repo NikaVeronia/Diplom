@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './FAQ.modules.css'; 
 
+type FAQProps = {
+  className?: string;
+};
+
 type FAQItem = {
   question: string;
   answer: string;
@@ -22,7 +26,7 @@ const faqData: FAQItem[] = [
   },
 ];
 
-const FAQ: React.FC = () => {
+const FAQ: React.FC<FAQProps> = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {

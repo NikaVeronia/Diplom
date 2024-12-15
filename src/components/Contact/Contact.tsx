@@ -1,6 +1,11 @@
 import './Contact.modules.css'
 import ContactMap from '../ContactMap/ContactMap';
-const Contact:React.FC=()=>{
+
+type ContactProps = {
+  className?: string;
+};
+
+const Contact:React.FC<ContactProps>=()=>{
     return(
         <div className='contact' id='contact'>
           <div className='ContCont'>

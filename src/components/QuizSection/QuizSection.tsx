@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./QuizSection.modules.css";
 
+type QuizSectionProps = {
+  className?: string;
+};
+
 type QuizStep = {
   type: "image" | "size" | "textarea" | "form";
   question: string;
@@ -41,7 +45,7 @@ const quizData: QuizStep[] = [
   },
 ];
 
-const QuizSection: React.FC = () => {
+const QuizSection: React.FC<QuizSectionProps> = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [formData, setFormData] = useState({ name: "", email: "" });

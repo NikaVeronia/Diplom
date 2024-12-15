@@ -1,7 +1,7 @@
 .ContComand {
     margin-top: 3%;
     padding-top: 5%;
-    width: auto;
+    width: 100%;
     background: rgba(72, 66, 131, 1);
     background-image: url('../../../src/image/Group 72.png');
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     margin: 0 15%;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* Медиа-запрос для экранов шириной до 1024px (планшеты) */

@@ -3,6 +3,10 @@ import axios from 'axios';
 import './Comand.modules.css';
 import TeamCard from '../TeamCard/TeamCard';
 
+type ComandProps = {
+  className?: string;
+};
+
 interface Team {
   id: number;
   imgUrl: string;
@@ -10,7 +14,7 @@ interface Team {
   role: string;
 }
 
-const Comand: React.FC = () => {
+const Comand: React.FC<ComandProps> = () => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

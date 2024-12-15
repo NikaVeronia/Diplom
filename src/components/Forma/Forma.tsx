@@ -1,5 +1,10 @@
 import'./Forma.modules.css'
-const Forma:React.FC=()=>{
+
+type FormaProps = {
+    className?: string;
+  };
+
+const Forma:React.FC<FormaProps>=()=>{
     return(
         <div className='Forma'>
             <form action="" className='Form'>

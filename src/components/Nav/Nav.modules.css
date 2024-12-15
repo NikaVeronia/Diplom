@@ -1,16 +1,18 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 60%;
+ display: grid;
+ grid-template-columns: 1fr 5fr 1fr;
+ grid-template-rows: 1fr;
+ width: 70%;
+ margin-left: 15%;
+ 
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 10px;
+    text-align: right;
 }
 
 .nav a {
@@ -23,8 +25,15 @@
 }
 
 .logo {
+  text-align: left;
     font-size: 24px;
     font-weight: bold;
+}
+.cart {
+  text-align: right;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Медиа-запрос для экранов шириной до 1024px (планшеты) */
@@ -63,7 +72,9 @@
     font-size: 18px;
     text-align: center;
   }
-
+  .cart {
+    font-size: 14px;
+  }
   .nav a {
     font-size: 14px;
   }

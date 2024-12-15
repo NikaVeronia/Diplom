@@ -5,8 +5,11 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./Catalog.modules.css";
 import Product from '../../types/types';
 
+type CatalogProps = {
+    className?: string;
+  };
 
-const Catalog: React.FC = () => {
+const Catalog: React.FC<CatalogProps> = ({ className }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -84,9 +87,10 @@ const fetchProducts = async (url:string) => {
   ).slice(0, visibleCount);
 
   return (
-  <div>
-     <h1 className="cattext">Каталог</h1>
-      <div className="catalog" id='catalog'>
+  <div className={className}>
+     <div className="cattext"><h1 >Каталог</h1></div>
+        <div className="catalog" id='catalog'>
+     
            <div className='catFit'>
               <Filter
                filters={filters}
@@ -121,7 +125,7 @@ const fetchProducts = async (url:string) => {
               )}
           </div>
       </div>
-      </div>
+    </div>
   );
 
   

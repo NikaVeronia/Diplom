@@ -1,7 +1,10 @@
 import "./About.modules.css";
-const About:React.FC = () => {
+type AboutProps = {
+  className?: string;
+};
+const About:React.FC<AboutProps> = () => {
     return(
-     <div className="aboutContainer" id="about">
+     <div className="aboutContainer "  id="about">
       <div className="figure"> <img src="../../../src/icon/figure.png" alt="" /></div>
         <div className="cont">
           <h2>Пара слов о нас</h2>
