@@ -15,12 +15,12 @@ const Forma:React.FC<FormaProps>=()=>{
                 <a href="#" className={`buttonFor`}> Отправить</a>
             </form>
             <div className='grid-container'>
-               <img src="../../../src/image/1024px-Instagram_logo 1.png" alt="" />
-               <img src="../../../src/image/Rectangle 37.jpg" alt="" />
-               <img className='dog' src="../../../src/image/Rectangle 38.jpg" alt="" />
-               <img src="../../../src/image/Rectangle 39.jpg" alt="" />
-               <img src="../../../src/image/Rectangle 40.jpg" alt="" />
-               <img src="../../../src/image/Rectangle 41.jpg" alt="" />
+               <img className='form-img' src="../../../src/image/1024px-Instagram_logo 1.png" alt="" />
+               <img className='form-img' src="../../../src/image/Rectangle 37.jpg" alt="" />
+               <img className='form-img dog' src="../../../src/image/Rectangle 38.jpg" alt="" />
+               <img className='form-img' src="../../../src/image/Rectangle 39.jpg" alt="" />
+               <img className='form-img' src="../../../src/image/Rectangle 40.jpg" alt="" />
+               <img className='form-img' src="../../../src/image/Rectangle 41.jpg" alt="" />
             </div>
         </div>
     )

@@ -1,13 +1,13 @@
 import React from 'react';
 import AppRoutes from './routes/Router';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
     <>
-      <Router>
+      <BrowserRouter future={{ v7_startTransition: true }}>
       <AppRoutes />
-    </Router>    
+    </BrowserRouter>    
     </>
   );
 };
