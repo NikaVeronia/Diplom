@@ -49,9 +49,6 @@
   color: rgba(68, 75, 88, 1);
 }
 
-/* Медиазапросы */
-
-/* Ширина до 1024px */
 @media (max-width: 1024px) {
   .catalog {
     grid-template-rows: 1fr;
@@ -63,12 +60,13 @@
   .catProd {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    width: 100%; /* Заполняет родительский элемент */
+    width: 100%; 
   }
 
   .catFit {
+    margin-left: 5%;
     width: 70%;
-    height: auto; /* Адаптируется к содержимому */
+    height: auto; 
   }
 
   .buttonNext {
@@ -77,7 +75,6 @@
   }
 }
 
-/* Ширина до 768px */
 @media (max-width: 768px) {
   .catalog {
     display: flex;
@@ -98,7 +95,7 @@
   }
 }
 
-/* Ширина до 480px */
+
 @media (max-width: 480px) {
   .catalog {
     display: flex;
@@ -108,7 +105,7 @@
   }
 
   .catProd {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5px;
     width: 100%;
   }
