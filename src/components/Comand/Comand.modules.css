@@ -17,7 +17,6 @@
     gap: 10px;
 }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
 @media (max-width: 1024px) {
     .ContComand {
         margin-top: 5%;
@@ -32,7 +31,6 @@
     }
 }
 
-/* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
 @media (max-width: 768px) {
     .ContComand {
         margin-top: 8%;

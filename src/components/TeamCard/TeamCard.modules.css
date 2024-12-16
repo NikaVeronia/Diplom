@@ -1,24 +1,22 @@
-.team-card{
+.team-card {
   width: 350px;
   height: auto;
   cursor: pointer;
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s ease;
-  
-
+  position: relative;
 }
+
 .team-card:hover {
   transform: scale(1.05);
 }
+
 .teamImg {
   margin: 15px;
-  width: 100%;
+  width: 80%;
   height: 350px;
   object-fit: cover;
-}
-.team-card {
-  position: relative;
 }
 
 .team-card-h2 {
@@ -30,9 +28,62 @@
   text-align: center;
   color: #faf6f6;
 }
+
 .team-card-p {
   font-size: 16px;
   line-height: 140%;
   text-align: center;
   color: #faf6f6;
+}
+
+@media (max-width: 1024px) {
+  .team-card {
+    width: 300px;
+  }
+  .teamImg {
+    width: 90%;
+    height: 300px;
+  }
+  .team-card-h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .team-card-p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    width: 250px;
+  }
+  .teamImg {
+    width: 100%;
+    height: 250px;
+  }
+  .team-card-h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .team-card-p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .teamImg {
+    width: 100%;
+    height: auto;
+  }
+  .team-card-h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .team-card-p {
+    font-size: 12px;
+  }
 }

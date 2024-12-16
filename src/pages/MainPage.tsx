@@ -12,20 +12,16 @@ import './MainPage.modules.css'; // Создайте файл CSS для сти�
 
 const MainPage: React.FC = () => {
   return (
-    <div>
-      <Header className="header" />
-      <main className="main">
-        <div className="grid-container">
+    <div className="grid-containers">
+      <Header className="grid-header" />
           <Catalog className="grid-catalog" />
-          <About className="about" />
-          <QuizSection className="quizsection" />
+          <About className="grid-about" />
+          <QuizSection className="grid-quizsection" />
           <Comand className="grid-comand" />
-          <FAQ className="faq" />
-          <Contact className="contact" />
-          <Forma className="forma" />
-        </div>
-      </main>
-      <Footer className="footer"/>
+          <FAQ className="grid-faq" />
+          <Contact className="grid-contact" />
+          <Forma className="grid-forma" />
+      <Footer className="grid-footer"/>
     </div>
   );
 };
