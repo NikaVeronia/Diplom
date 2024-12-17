@@ -1,4 +1,4 @@
-import Nav from '../Nav/Nav';
+import FooterNav from '../FooterNav/FooterNav';
 import  './Footer.modules.css';
 
 type FooterProps = {
@@ -9,7 +9,7 @@ const Footer: React.FC<FooterProps>  = () => {
   return (
     <footer className={`footer`}>
       <div className={`block`} >
-        <Nav />
+        <FooterNav />
       </div>
     </footer>
   );

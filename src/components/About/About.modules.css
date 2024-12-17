@@ -49,6 +49,7 @@ article {
 
 
 @media (max-width: 1024px) {
+
     .aboutContainer {
         flex-direction: column;
         gap: 5%;
@@ -96,7 +97,6 @@ article {
     }
    
 }
- /* Медиа-запрос для экранов шириной до 768px (мобильные устройства) */
  @media (max-width: 380px) {
     .figure{
        display: none;

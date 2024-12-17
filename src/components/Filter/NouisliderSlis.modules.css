@@ -2,14 +2,13 @@
 .noUi-target {
   background: #f5f5f5; /* Цвет фона дорожки */
   border: 1px solid #ccc; /* Рамка */
-  border-radius: 8px; /* Закругленные углы */
-  height: 6px; /* Высота дорожки */
+  height: 5px; /* Высота дорожки */
 }
 
 /* Активная (заполненная) часть дорожки */
 .noUi-connect {
-  background: #b9a6a4; /* Цвет активной части */
-  border-radius: 8px;
+  background: #b9a6a4;
+  /*Цветактивнойчасти*/
 }
 
 /* Ползунки */
@@ -25,7 +24,7 @@
 /* Активный ползунок при фокусе */
 .noUi-handle:focus {
   outline: none;
-  box-shadow: 0 0 10px #007bff;
+  box-shadow: 0 0 10px #5b5b5b;
 }
 
 /* Отображение шкалы (если включена) */

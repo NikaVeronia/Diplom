@@ -36,6 +36,9 @@
 
 .checkbox {
   accent-color: rgb(227, 210, 200);
+  background-color: #b9a6a4;
+  border:1px solid #b9a6a4;
+  width: 50px;
 }
 
 .sizeButtom {
@@ -66,7 +69,7 @@
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  
 }
 
 .buttonFilt {
@@ -132,7 +135,7 @@
  
 .nouislider {
    width: 100%;
-   max-width: 250px;
+   max-width: 550px;
    margin: 0 auto;
    position: relative;
    box-sizing: border-box;
@@ -153,7 +156,7 @@
 
 @media (max-width: 1024px) {
   .filter {
-    width: 100%;
+    width:auto;
     height: auto;
     padding: 30px;
    

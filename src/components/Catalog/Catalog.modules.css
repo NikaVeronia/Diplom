@@ -131,6 +131,12 @@
     margin-left: 5%;
     align-self: center;
   }
+  .errorProd{
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 26px;
+
+  }
   .cattext {
    text-align: left;
   }

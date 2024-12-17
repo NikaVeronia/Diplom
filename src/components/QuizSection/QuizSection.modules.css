@@ -67,6 +67,7 @@
     border: 2px solid transparent;
     border-radius: 8px;
     cursor: pointer;
+   
   }
   .quiz-form{
     display: flex;

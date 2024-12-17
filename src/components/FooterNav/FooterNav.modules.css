@@ -7,8 +7,8 @@
   background-color: none;
   position: relative;
 }
-.nav.open{
-  background-color: #3e2e87;
+.footnav.open{
+  background-color: rgba(68, 75, 88, 1);
 }
 .logo {
   font-size: 24px;
@@ -16,19 +16,19 @@
   color: #fbfafa;
 }
 
-.nav {
+.footnav {
   display: flex;
   gap: 20px;
 }
 
-.nav a {
+.footnav a {
   text-decoration: none;
   color: #fdfafa;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav a:hover {
+.footnav a:hover {
   color: #e53935;
 }
 
@@ -36,6 +36,7 @@
   text-decoration: none;
   color: #fdfcfc;
   font-size: 16px;
+  width: auto;
 }
 
 /* Бургер-иконка */
@@ -59,11 +60,11 @@
     display: flex;
   }
 
-  .nav {
+  .footnav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: -350px;
     left: 0;
     width: 100%;
     background-color: #fff;
@@ -72,11 +73,11 @@
     z-index: 1000;
   }
 
-  .nav.open {
+  .footnav.open {
     display: flex;
   }
 
-  .nav a {
+  .footnav a {
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #ddd;

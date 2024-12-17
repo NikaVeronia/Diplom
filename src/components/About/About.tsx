@@ -12,7 +12,7 @@ const About:React.FC<AboutProps> = () => {
            Через спорт мы можем менять жизни. В том числе с помощью воодушевляющих
            историй спортсменов.Чтобы помочь тебе подняться и двигаться вперед. </p>
            <article><svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <line x1="1.31134e-07" y1="1.5" x2="15" y2="1.5" stroke="white" stroke-width="3"/>
+           <line x1="1.31134e-07" y1="1.5" x2="15" y2="1.5" stroke="white" strokeWidth="3"/>
            </svg>SneakMax</article>
         </div>
              <img src="../../../src/image/Mask Group.png" alt="" className="imgAbout" /> 
