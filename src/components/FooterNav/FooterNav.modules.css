@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 11%;
   padding: 10px 20px;
   gap: 10px;
   background-color: none;
@@ -54,8 +55,11 @@
   transition: all 0.3s ease;
 }
 
-/* Медиа-запрос для адаптации */
 @media (max-width: 1024px) {
+  .container {
+    margin: 0 11%;
+    gap: 10px; 
+  }
   .burger-menu {
     display: flex;
   }
