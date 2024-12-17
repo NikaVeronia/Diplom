@@ -1,45 +1,10 @@
 .grid-containers {
+  width: 100%;
+  border: solid 2px #000;
   display: grid;
-  grid-template-rows:
-    'header header header header header'
-    'main'
-    'catalog catalog'
-    'about'
-    'quizsection'
-    'comand'
-    'faq'
-    'contact contact'
-    'forma'
-    'footer';
-  gap: 10px;
-  width: auto;
-  box-sizing: border-box;
 }
-
-.grid-header {
-  grid-template-rows: header;
-}
-.grid-about {
-  grid-template-rows: about;
-}
-.grid-catalog {
-  grid-template-rows: catalog;
-}
-.grid-quizsection {
-  grid-template-rows: quizsection;
-}
-.grid-comand {
-  grid-template-rows: comand;
-}
-.grid-faq {
-  grid-template-rows: faq;
-}
-.grid-contact {
-  grid-area: contact;
-}
-.grid-forma {
-  grid-template-rows: forma;
-}
-.grid-footer {
-  grid-template-rows: footer;
+.grid-item {
+  font-size: 1.1em;
+  padding: 1.5em;
+  
 }

@@ -122,11 +122,12 @@ const fetchProducts = async (url:string) => {
                               </button>
                           </div>
                       )}
+                      
                   </>
               )}
           </div>
+          </div>
       </div>
-    </div>
   );
 
   

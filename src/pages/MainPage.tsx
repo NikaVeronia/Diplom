@@ -8,20 +8,20 @@ import Forma from '../components/Forma/Forma';
 import FAQ from '../components/FAQ/FAQ';
 import QuizSection from '../components/QuizSection/QuizSection';
 import Header from '../components/Header/Header';
-import './MainPage.modules.css'; // Создайте файл CSS для стилей
+import './MainPage.modules.css'; 
 
 const MainPage: React.FC = () => {
   return (
     <div className="grid-containers">
-      <Header className="grid-header" />
-          <Catalog className="grid-catalog" />
-          <About className="grid-about" />
-          <QuizSection className="grid-quizsection" />
-          <Comand className="grid-comand" />
-          <FAQ className="grid-faq" />
-          <Contact className="grid-contact" />
-          <Forma className="grid-forma" />
-      <Footer className="grid-footer"/>
+      <Header className="grid-item" />
+          <Catalog className="grid-item" />
+          <About className="grid-item" />
+          <QuizSection className="grid-item" />
+          <Comand className="grid-item" />
+          <FAQ className="grid-item" />
+          <Contact className="grid-item" />
+          <Forma className="grid-item" />
+      <Footer className="grid-item"/>
     </div>
   );
 };

@@ -28,8 +28,27 @@ article {
     margin-left: 70%;
     font-size: 18px;
 }
+@media (max-width: 1280px) {
+    .aboutContainer {
+        flex-direction: column;
+        gap: 5%;
+        height: auto;
+        align-items: center;
+    }
 
-/* Медиа-запрос для экранов шириной до 1024px (планшеты) */
+    .cont {
+        width: 100%;
+        text-align: center;
+    }
+
+    article {
+        margin-left: 0;
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+
 @media (max-width: 1024px) {
     .aboutContainer {
         flex-direction: column;

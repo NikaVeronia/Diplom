@@ -63,10 +63,32 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+@media (max-width: 1240px) {
+  .card {
+    width: 250px;
+  }
+
+  .image {
+    height: 120px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .options {
+    margin-left: 20%;
+  }
+}
+
 
 @media (max-width: 1024px) {
   .card {
-    width: 150px;
+    width: 200px;
   }
 
   .image {
