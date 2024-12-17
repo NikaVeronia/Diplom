@@ -58,7 +58,21 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
       .then((data) => setSneakers(data))
       .catch((error) => console.error("Ошибка загрузки данных:", error));
   }, []);
+  const sizeRanges = [
+    { label: 'менее 36', range: [0, 35] },
+    { label: '36–38', range: [36, 38] },
+    { label: '39–41', range: [39, 41] },
+    { label: '42–44', range: [42, 44] },
+    { label: '45 и больше', range: [45, Infinity] },
+  ];
 
+// Генерируем группы и определяем выбранные диапазоны
+const groupedSizes = sizeRanges.map((group) => ({
+  label: group.label,
+  sizes: sneakers.flatMap((sneaker) => sneaker.sizes).filter(
+    (size) => size >= group.range[0] && size <= group.range[1]
+  ),
+}));
   const handleNextStep = () => {
     console.log(`Шаг ${currentStep + 1}:`, answers[currentStep] || "Ответ не заполнен");
     if (currentStep < quizData.length - 1) {
@@ -122,21 +136,22 @@ const QuizSection: React.FC<QuizSectionProps> = () => {
           <>
             <p className="quiz-question">{currentQuiz.question}</p>
             <div className="quiz-sizes">
-              {Array.from(new Set(sneakers.flatMap((sneaker) => sneaker.sizes))).map(
-                (size, index) => (
-                  <label key={index} className="quiz-size">
-                    <input
-                      type="checkbox"
-                      name="size"
-                      value={size}
-                      checked={answers[currentStep] === size.toString()}
-                      onChange={() => handleSelect(currentStep, size.toString())}
-                    />
-                    {size}
-                  </label>
-                )
-              )}
-            </div>
+    {groupedSizes.map((group, index) => (
+      <label key={index} className="quiz-size">
+        <input
+          type="checkbox"
+          name="size-range"
+          value={group.label}
+          checked={answers[currentStep] === group.label}
+          onChange={() => handleSelect(currentStep, group.label)}
+        />
+        {group.label}
+      </label>
+    ))}
+  </div>
+            <div className="imgRectangle">
+               <img className="imgRect" src="../../../src/image/Rectangle 45.jpg" alt="" />
+              </div>
           </>
         )}
 

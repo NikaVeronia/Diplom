@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "./Nav.modules.css";
 
 const Nav: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="container">
       <div className="logo">SneakMax</div>
-      <div className="nav">
+
+      {/* Иконка бургера */}
+      <div className="burger-menu" onClick={toggleMenu}>
+        <div className="burger-line"></div>
+        <div className="burger-line"></div>
+        <div className="burger-line"></div>
+      </div>
+
+      {/* Навигация */}
+      <div className={`nav ${menuOpen ? "open" : ""}`}>
         <ScrollLink to="catalog" smooth={true} duration={500} offset={-50}>
           Каталог
         </ScrollLink>
@@ -27,6 +42,8 @@ const Nav: React.FC = () => {
           Контакты
         </ScrollLink>
       </div>
+
+      {/* Корзина */}
       <Link to="/basket" className="cart">
         Корзина 🛒
       </Link>

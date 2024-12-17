@@ -81,6 +81,19 @@
     .quiz-p{
   color: rgba(255, 255, 255, 1) ;
   }
+  .imgRectangle{
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+ 
+  }
+  .imgRect{
+   
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+  }
 
    .quiz-size input {
     accent-color: rgb(227, 210, 200);

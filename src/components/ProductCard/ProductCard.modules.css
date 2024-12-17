@@ -139,11 +139,11 @@
 
 @media (max-width: 480px) {
   .card {
-    width: 150px;
+    width: 250px;
   }
 
   .image {
-    height: 100px;
+    height: 150px;
   }
 
   .name {

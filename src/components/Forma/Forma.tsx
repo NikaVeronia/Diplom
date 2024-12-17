@@ -19,7 +19,6 @@ const Forma: React.FC<FormaProps> = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Логи:', formData);
-    // Если нужно, добавьте отправку данных на сервер здесь.
     setFormData({ field1: '', field2: '' }); // Очистка полей формы
   };
 

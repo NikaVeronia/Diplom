@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: 1fr;
@@ -95,5 +95,90 @@
   .cart {
     text-align: center; 
     margin-top: 10px;
+  }
+} */
+/* Общие стили */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 11%;
+  background-color: none;
+  position: relative;
+}
+.nav.open{
+  background-color: #3e2e87;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fbfafa;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fdfafa;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #e53935;
+}
+
+.cart {
+  text-decoration: none;
+  color: #fdfcfc;
+  font-size: 16px;
+}
+
+/* Бургер-иконка */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #faf9f9;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Медиа-запрос для адаптации */
+@media (max-width: 1024px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
   }
 }

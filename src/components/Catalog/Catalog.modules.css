@@ -61,7 +61,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'prods prods ';
     gap: 10px;
-    width: 70%;
+  
   }
   .prods {
     overflow: hidden;
@@ -145,6 +145,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: 'prods';
     gap: 5px;
+    width: 100%;
   }
   .prods {
     overflow: hidden;
